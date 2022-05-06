@@ -1,0 +1,6 @@
+os: osx
+language: swift
+osx_image: xcode12.3
+xcode_scheme: medium-travisci-unit-testing-practice
+xcode_destination: platform=iOS Simulator,OS=15.0,name=iPhone 12 Pro Max
+script: 'xcodebuild clean test -project medium-travisci-unit-testing-practice.xcodeproj -scheme "medium-travisci-unit-testing-practice" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.0,name=iPhone 12 Pro Max" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO'
